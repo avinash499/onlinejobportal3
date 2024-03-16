@@ -2,10 +2,13 @@ import os
 from pathlib import Path
 from django.core.management.utils import get_random_secret_key
 
+
+# Load environment variables from .env
+
 SECRET_KEY = get_random_secret_key()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DEBUG = True  # Set to False in production
+DEBUG = False # Set to False in production
 ALLOWED_HOSTS = ['.vercel.app', 'now.sh', '127.0.0.1', 'localhost']
 
 INSTALLED_APPS = [
